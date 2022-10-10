@@ -10,7 +10,7 @@
 <body>
 <?php
     require 'mydbms.php';
-    if(isset($_POST["felhasznalonev"]) && isset($_POST["jog"])
+    if(isset($_POST["felhasznalonev"]) 
         && isset($_POST["jelszo"]) && isset($_POST["email"]) )
     {
         $utvonal = __DIR__."\\felhasznalok.txt";
@@ -44,18 +44,18 @@
             $felhasznalonev = $_POST["felhasznalonev"];
             $jelszo = md5($_POST["jelszo"]);
             $email = $_POST["email"];
-            $jog = $_POST["jog"];
+            
         
             
 
             
             $f = fopen($utvonal, "a");
             $sor = $felhasznalonev.";".
-                   $jelszo.";".$jog.";".$email.";".$_POST["felhasznalonev"];
+                   $jelszo.";".$email.";".$_POST["felhasznalonev"];
 
             $con = connect('user','root','');
-            $query = 'insert into users(felhasznalonev, jelszo, jog, email)
-             VALUES("'.$_POST['felhasznalonev'].'","'.md5($_POST['jelszo']).'","'.$_POST['jog'].'","'.$_POST['email'].'")';
+            $query = 'insert into users(felhasznalonev, jelszo, email)
+             VALUES("'.$_POST['felhasznalonev'].'","'.md5($_POST['jelszo']).'","'.$_POST['email'].'")';
             $results = mysqli_query($con, $query);
             
             if(!$results)
