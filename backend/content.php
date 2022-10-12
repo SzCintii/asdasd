@@ -25,8 +25,6 @@
         case 450:
             include 'listMovies.php';
             break;
-        //case 35:
-        //    include 'profilom.php';
-        //    break;
+        
     }
 ?>
