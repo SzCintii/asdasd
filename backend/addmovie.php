@@ -3,7 +3,7 @@
     <input type="text" name="cim" id="cim"/><br>
 
     <label for="megjelenesEv">Megjelenés: </label>
-    <input type="date" name="megjelenesEv" id="megjelenesEv" required/><br>
+    <input type="date" name="megjelenes_ev" id="megjelenes_ev" required/><br>
 
     <label for="kategoria">Kategória: </label>
     <input type="text" name="kategoria" id="kategoria"/><br>
