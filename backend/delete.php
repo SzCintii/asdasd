@@ -1,6 +1,6 @@
 <?php
     require 'mydbms.php';
-    $con = connect('user','root','');
+    $con = connect();
     $filmId = $_POST['film_id'];
     $userId = $_SESSION['id'];
     $query="DELETE FROM film WHERE film_id=".$_POST['film_id'];

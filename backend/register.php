@@ -53,7 +53,7 @@
             $sor = $felhasznalonev.";".
                    $jelszo.";".$email.";".$_POST["felhasznalonev"];
 
-            $con = connect('user','root','');
+            $con = connect();
             $query = 'insert into users(felhasznalonev, jelszo, email)
              VALUES("'.$_POST['felhasznalonev'].'","'.md5($_POST['jelszo']).'","'.$_POST['email'].'")';
             $results = mysqli_query($con, $query);

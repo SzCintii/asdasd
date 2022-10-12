@@ -16,7 +16,7 @@
         $tulaj = $_POST['tulaj'];
 
         require 'mydbms.php';
-        $con = connect('user', 'root', '');
+        $con = connect();
         $query = "INSERT INTO film(cim, megjelenes_ev, kategoria, hossz, tulaj)
          VALUES ('$cim', '$megjelenes_ev', '$kategoria','$hossz','$tulaj')";
         
