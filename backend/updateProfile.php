@@ -32,7 +32,6 @@
         echo "<a href='index.php?page=10'>Vissza a profilomhoz</a>";
     }
 
-    //$_SESSION['felhasznalonev'] = $ujFelhasznalonev;
     
 ?>
     
