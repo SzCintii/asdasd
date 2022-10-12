@@ -31,7 +31,30 @@ CREATE TABLE if not exists `kölcsönzés` (
   `Film_ID` int(2) NOT NULL,
   `Kölcsönző_ID` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- Indexek a kiírt táblákhoz
+--
+
+--
+-- A tábla indexei `kölcsönzés`
+--
+ALTER TABLE `kölcsönzés`
+  ADD PRIMARY KEY (`Film_ID`,`Kölcsönző_ID`);
+--
+-- Megkötések a kiírt táblákhoz
+--
+
+--
+-- Megkötések a táblához `kölcsönzés`
+--
+ALTER TABLE `kölcsönzés`
+  ADD CONSTRAINT `FK_FilmID` FOREIGN KEY (`Film_ID`) REFERENCES `filmek` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_KolcsonzoID` FOREIGN KEY (`Kölcsönző_ID`) REFERENCES `user` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
 COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
