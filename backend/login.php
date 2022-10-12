@@ -12,7 +12,7 @@
     <?php
         require "mydbms.php";
 
-        $con = connect('user', 'root', '');
+        $con = connect();
         $felhasznalonev = $_POST['felhasznalonev'];
         $jelszo = md5($_POST['jelszo']);
 
