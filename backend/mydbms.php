@@ -1,5 +1,5 @@
 <?php
-    function connect($dbname, $username, $password) 
+    function connect() 
     {
         $connection = mysqli_connect('localhost', 'root', '', 'asdasd', 3306);
         if(!isset($connection))
