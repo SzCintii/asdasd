@@ -1,6 +1,6 @@
 <?php
     require 'mydbms.php';
-    $con = mysqli_connect('localhost', 'root', '', 'user', 3306);
+    $con = connect();
     $query = "SELECT * FROM film";
     $results = mysqli_query($con, $query);
     $filmek = mysqli_fetch_all($results); 
