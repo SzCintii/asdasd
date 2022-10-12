@@ -9,9 +9,7 @@
 
     switch($d) {
         
-        //case 0:
-        //    include 'listMotors.php';
-        //    break;
+        
         case 100:
             include 'addmovie.php';
             break;
