@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `filmek` (
-  `ID` int(2) NOT NULL,
+  `ID` int(2) NOT NULL AUTO_INCREMENT,
   `Cím` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Kategória` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Hossz` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,

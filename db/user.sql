@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `user` (
-  `ID` int(2) NOT NULL,
+  `ID` int(2) NOT NULL AUTO_INCREMENT,
   `Felhasználónév` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Email` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Jelszó` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
@@ -49,4 +49,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
