@@ -18,7 +18,7 @@
     $userId = $_SESSION['id'];
     $ujEmail = $_POST['email'];
 
-    $query = "UPDATE users
+    $query = "UPDATE user
      SET felhasznalonev='$ujFelhasznalonev', jelszo='$ujJelszo', email='$ujEmail'
      WHERE id='$userId'";
     $result=mysqli_query($con, $query) or die ("Nem sikerült ".$query);

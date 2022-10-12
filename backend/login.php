@@ -16,7 +16,7 @@
         $felhasznalonev = $_POST['felhasznalonev'];
         $jelszo = md5($_POST['jelszo']);
 
-        $query = "SELECT * FROM users
+        $query = "SELECT * FROM user
         WHERE felhasznalonev='$felhasznalonev' AND jelszo='$jelszo'";
         $results=mysqli_query($con, $query) or die ("Nem sikerült ".$query);
         $loggedInUser=mysqli_fetch_row($results);

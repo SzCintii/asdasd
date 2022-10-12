@@ -41,9 +41,9 @@
            
 
             
-            $felhasznalonev = $_POST["felhasznalonev"];
-            $jelszo = md5($_POST["jelszo"]);
-            $email = $_POST["email"];
+            $felhasznalonev = $_POST["Felhasználónév"];
+            $jelszo = md5($_POST["Jelszó"]);
+            $email = $_POST["Email"];
             
         
             
@@ -51,11 +51,11 @@
             
             $f = fopen($utvonal, "a");
             $sor = $felhasznalonev.";".
-                   $jelszo.";".$email.";".$_POST["felhasznalonev"];
+                   $jelszo.";".$email.";".$_POST["Felhasználónév"];
 
             $con = connect();
-            $query = 'insert into users(felhasznalonev, jelszo, email)
-             VALUES("'.$_POST['felhasznalonev'].'","'.md5($_POST['jelszo']).'","'.$_POST['email'].'")';
+            $query = 'insert into user(Felhasználónév, Jelszó, Email, Admin)
+             VALUES("'.$_POST['Felhasználónév'].'","'.md5($_POST['Jelszó']).'","'.$_POST['Email'].'", 0)';
             $results = mysqli_query($con, $query);
             
             if(!$results)

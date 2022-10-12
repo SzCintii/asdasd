@@ -2,7 +2,7 @@
     $id = $_SESSION['id'];
     require 'mydbms.php';
     $con = connect();
-    $query = "SELECT * FROM users WHERE id=$id";
+    $query = "SELECT * FROM user WHERE id=$id";
     $results = mysqli_query($con, $query);
     $result = mysqli_fetch_row($results);
 ?>
