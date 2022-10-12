@@ -2,7 +2,6 @@
     $id = $_SESSION['id'];
     require 'mydbms.php';
     $con = connect('user', 'root', '');
-    //$motorid = $_POST['motorid'];
     $query = "SELECT * FROM users WHERE id=$id";
     $results = mysqli_query($con, $query);
     $result = mysqli_fetch_row($results);
