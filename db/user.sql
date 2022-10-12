@@ -31,7 +31,8 @@ CREATE TABLE `user` (
   `ID` int(2) NOT NULL,
   `Felhasználónév` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Email` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
-  `Jelszó` varchar(225) COLLATE utf8_hungarian_ci NOT NULL
+  `Jelszó` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
+  `Admin` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -48,3 +49,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
