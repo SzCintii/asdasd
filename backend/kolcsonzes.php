@@ -4,7 +4,7 @@
     $userId = $_SESSION['id'];
     require 'mydbms.php';
     $con = connect();
-    $query = "INSERT INTO kolcsonzesek(film_id, kolcsonzo_id) VALUES('$filmId','$userId')";
+    $query = "INSERT INTO kolcsonzes(film_id, kolcsonzo_id) VALUES('$filmId','$userId')";
     $result = mysqli_query($con,$query)  or die ("Nem sikerült ".$query);
     header('Location: index.php');
 ?>
