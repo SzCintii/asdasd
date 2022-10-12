@@ -49,3 +49,13 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--alapadatok
+INSERT INTO user (Felhasználónév, Email, Jelszó, Admin)
+VALUES ('Admin1', 'admin1@jonapottanarur.com', 'asdasd', 1);
+
+INSERT INTO user (Felhasználónév, Email, Jelszó, Admin)
+VALUES ('Admin2', 'admin2@jonapottanarur.com', 'asdasd', 1);
+
+INSERT INTO user (Felhasználónév, Email, Jelszó, Admin)
+VALUES ('Lajos', 'lajos@jonapottanarur.com', 'asdasd', 0);
