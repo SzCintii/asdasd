@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Tábla szerkezet ehhez a táblához `kölcsönzés`
 --
 
-CREATE TABLE `kölcsönzés` (
+CREATE TABLE if not exists `kölcsönzés` (
   `Film_ID` int(2) NOT NULL,
   `Kölcsönző_ID` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;

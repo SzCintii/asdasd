@@ -27,24 +27,13 @@ SET time_zone = "+00:00";
 -- Tábla szerkezet ehhez a táblához `user`
 --
 
-CREATE TABLE `user` (
-  `ID` int(2) NOT NULL AUTO_INCREMENT,
+CREATE TABLE if not exists `user` (
+  `ID` int(2) PRIMARY KEY AUTO_INCREMENT,
   `Felhasználónév` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Email` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Jelszó` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Admin` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
---
--- Indexek a kiírt táblákhoz
---
-
---
--- A tábla indexei `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`ID`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
@@ -59,3 +48,5 @@ VALUES ('Admin2', 'admin2@jonapottanarur.com', 'asdasd', 1);
 
 INSERT INTO user (Felhasználónév, Email, Jelszó, Admin)
 VALUES ('Lajos', 'lajos@jonapottanarur.com', 'asdasd', 0);
+
+COMMIT;

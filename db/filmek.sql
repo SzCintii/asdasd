@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 -- Tábla szerkezet ehhez a táblához `filmek`
 --
 
-CREATE TABLE `filmek` (
-  `ID` int(2) NOT NULL AUTO_INCREMENT,
+CREATE TABLE if not exists `filmek` (
+  `ID` int(2) Primary KEY AUTO_INCREMENT,
   `Cím` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Kategória` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
   `Hossz` varchar(225) COLLATE utf8_hungarian_ci NOT NULL,
@@ -36,17 +36,10 @@ CREATE TABLE `filmek` (
   `Tulaj` varchar(225) COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
---
--- Indexek a kiírt táblákhoz
---
 
---
--- A tábla indexei `filmek`
---
-ALTER TABLE `filmek`
-  ADD PRIMARY KEY (`ID`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+COMMIT;
