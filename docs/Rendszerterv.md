@@ -47,6 +47,6 @@
 
 ## Adatbázis terv
 
-![enter image description here](https://media.discordapp.net/attachments/339221080424185856/1025020647878967336/unknown.png)
+![enter image description here](https://cdn.discordapp.com/attachments/339221080424185856/1029789003941150790/Kepernyokep_2022-10-12_181317.png)
 
 
